@@ -4,6 +4,7 @@ import 'contacts/contaccts.dart';
 import 'common/found.dart';
 import 'USER/usersInfo.dart';
 import 'USER/shopPage.dart';
+import 'USER/animation.dart';
 class App extends StatefulWidget {
   @override
   MainState createState() => MainState();
@@ -16,7 +17,7 @@ class MainState extends State<App> {
   Contacts contacts;
   FoundPage foundPage;
   simpleDialogDemo usersInfo;
-  shopList shoplist;
+  animations animation;
   currentPage(){
     switch(_currentIndex){
       case 0:
@@ -35,10 +36,10 @@ class MainState extends State<App> {
         }
         return foundPage;
       case 3:
-        if(shoplist == null){
-          shoplist = shopList();
+        if(animation == null){
+          animation = animations();
         }
-        return shoplist;
+        return animation;
 
     }
   }
