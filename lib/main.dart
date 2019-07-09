@@ -3,6 +3,7 @@ import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'loading.dart';
 import 'app.dart';
 import 'search.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 void main() => runApp(MaterialApp(
   debugShowCheckedModeBanner: false,
   title: 'wechat',
@@ -20,6 +21,11 @@ void main() => runApp(MaterialApp(
     ),
     'search':(BuildContext Context) => new Search(),
   },
+  localizationsDelegates: [
+    GlobalMaterialLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ],
+  supportedLocales: [Locale('en','US'),Locale('zh','CN')],
   home:new loadingPage() ,
 ));
 
